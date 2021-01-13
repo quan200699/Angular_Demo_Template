@@ -1,0 +1,38 @@
+<div class="card-header">
+  <h3 class="card-title">Quick Example</h3>
+</div>
+<form role="form" (ngSubmit)="addNewProduct()">
+  <div class="card-body">
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input type="text" class="form-control" id="id" name="id" [(ngModel)]="product.id" placeholder="Enter id">
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" [(ngModel)]="product.name">
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" [(ngModel)]="product.price">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description" placeholder="Enter description" name="description" [(ngModel)]="product.description">
+    </div>
+    <div class="form-group">
+      <label>Category</label>
+      <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger"
+              style="width: 100%;">
+        <option selected="selected" value="" disabled>Select category</option>
+        <option value="mobile">Mobile</option>
+        <option value="TV">TV</option>
+        <option value="Tablet">Tablet</option>
+      </select>
+    </div>
+  </div>
+  <!-- /.card-body -->
+
+  <div class="card-footer">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
